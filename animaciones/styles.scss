@@ -58,14 +58,13 @@ body{
         img{
             width: 100%;
             height: 100%;
-            transition: height 2s ease, width 2s ease;
+            transition: 2s linear;
         }
         .info{
             background-color: black;
             color:white;
             width: 100%;
             height: 0%;
-            font-size: 0.5rem;
             z-index: -1;
             transition: z-index 0s ease,height 2s ease, width 2s ease;
             position: absolute;
@@ -84,7 +83,6 @@ body{
         }
     }
     .animacions{
-
         div{
             display: flex;
             flex-direction: column;
@@ -100,7 +98,6 @@ body{
         .animacio3{
             @include margeAbaix(50px)
         }
-
         .animacio5{
             @include margeAbaix(50px)
         }
@@ -115,7 +112,6 @@ body{
         animation-duration: 2s;
         animation-timing-function: ease-in;
         animation-delay: 1s;
-        /*Información original: 2*/
         animation-iteration-count: infinite;
         animation-direction: alternate;
         animation-fill-mode: backwards;
@@ -145,13 +141,10 @@ body{
     }
 
 
-    /*Siempre será igual, se moverá desde la esquina superior izquierda a la derecha*/
     @keyframes spin {
-        /*Siempre comienza en un punto*/
         from {
             transform: rotate(0deg);
         }
-        /*Y termina en otro*/
         to {
             transform: rotate(360deg);
         }
@@ -219,9 +212,6 @@ body{
         animation-iteration-count: infinite;
         animation-direction:alternate;
     }
-
-
-    /*Siempre será igual, se moverá desde la esquina superior izquierda a la derecha*/
     @keyframes move-left {
         from {
             transform: translate(-200px,0);
@@ -241,8 +231,8 @@ body{
     
     .mida {
         animation: resize 2s ease-in-out infinite;
+        animation-direction: alternate;
     }
-    /*Siempre será igual, se moverá desde la esquina superior izquierda a la derecha*/
     @keyframes resize {
         from {
             transform: scale(1);
